@@ -3,9 +3,10 @@ const {mailer} = require('../services/sendMail')
 exports.sendMail = (req, res, next) => {
 
     const options = {
-        to_id: req.query.to_id,
-        subject: req.query.subject,
-        text: req.query.text,
+        to_id: req.body.to_id,
+        subject: req.body.subject,
+        text: req.body.text,
+        html: req.body.html,
     }
 
     mailer(options)
@@ -21,8 +22,4 @@ exports.sendMail = (req, res, next) => {
                 e
             })
         })
-}
-
-exports.mail = (req, res, next) => {
-    res.send(req.body)
 }
