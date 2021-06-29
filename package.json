@@ -2,10 +2,9 @@
   "name": "smtp-form-response",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
-    "start": "node main",
-    "dev": "nodemon main"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
